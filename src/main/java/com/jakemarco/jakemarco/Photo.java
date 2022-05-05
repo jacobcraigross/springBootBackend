@@ -1,5 +1,7 @@
 package com.jakemarco.jakemarco;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.validation.constraints.NotEmpty;
 
 public class Photo {
@@ -9,6 +11,7 @@ public class Photo {
     @NotEmpty
     private String fileName;
 
+    @JsonIgnore
     private byte[] data;
 
     public byte[] getData() {
